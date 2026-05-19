@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
+    <!-- Viewport: prevent zoom on input focus, fill notched screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <!-- Theme color matches the dark bg so the iOS status bar blends in -->
+    <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)" />
+
+    <!-- iOS PWA: when "Add to Home Screen" is tapped, open fullscreen, no browser chrome -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rival" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+
+    <!-- Manifest enables installable PWA on Android Chrome too -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- OpenGraph for when the link gets shared in iMessage / Discord -->
+    <meta property="og:title" content="Rival" />
+    <meta property="og:description" content="Bet on anything with your friends. USDC settled, zero rake." />
+    <meta property="og:type" content="website" />
+
+    <title>Rival</title>
+    <style>
+      /* Prevent flash of white before app boots */
+      html, body { background: #0A0A0A; margin: 0; padding: 0; }
+      @media (prefers-color-scheme: light) {
+        html, body { background: #FAFAFA; }
+      }
+      /* Loading state until React hydrates */
+      #root:empty::after {
+        content: '';
+        position: fixed; inset: 0;
+        background: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
