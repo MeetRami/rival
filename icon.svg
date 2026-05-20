@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="112" fill="#0A0A0A"/>
+  <!-- Acid green dot, top-left -->
+  <circle cx="120" cy="200" r="22" fill="#A3E635"/>
+  <!-- "R" mark — bold geometric, no font dependency -->
+  <g fill="#FAFAFA" transform="translate(168,140)">
+    <!-- Stylized R built from rects + arcs for crisp rendering at any size -->
+    <path d="M 0 0 L 0 232 L 50 232 L 50 144 L 110 144 L 160 232 L 220 232 L 162 132 C 195 118 215 88 215 50 C 215 22 195 0 160 0 Z M 50 44 L 145 44 C 158 44 165 52 165 64 L 165 80 C 165 92 158 100 145 100 L 50 100 Z" />
+  </g>
+</svg>
